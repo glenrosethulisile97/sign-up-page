@@ -38,17 +38,21 @@ def login():
         username = request.form['username']
         password = request.form['password']
 
-        # Check if user exists
-        existing_user = db.signup.find_one({'username': username, 'password': password})
-        if existing_user:
-            # Redirect to homepage or some other route
-            return redirect(url_for('home'))
-        else:
-            # User not found, display error message
-            return 'Invalid username or password'
+       
+
+    # Insert new user into the database
+        user = {'username': username, 'password': password}
+        if  db.user.insert_one(user):
+            return render_template ("landingpage.html")
+        
 
     # Render the login form template
-    return render_template('loginpage.html')
+    return render_template('login.html')
 
-if __name__ == "__main__":
-    app.run(debug=True)
+@app.route('/', methods=['GET', 'POST'])
+def HomePage():
+    return render_template("landingpage.html")
+
+
+if __name__ == '_main_':
+    app.run(host='0.0.0.0', port=5000, debug=True)

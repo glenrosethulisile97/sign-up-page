@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f1f1f1;
+    background-image: url(https://i.pinimg.com/564x/1a/00/12/1a00129d84a6e87de8c9e77fc08ebc91.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+.container {
+    background-color:transparent;
+    max-width: 800px;
+    height: 550px;
+    margin: 0 auto;
+    background-color: hsla(0, 10%, 82%, 0.417);
+    padding: 20px;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 300px;
+    border: 3px black;
+    margin-top: 100px;
+}
+
+
+
+  .slide{
+    height: 450px;
+    margin-top: 10px;
+    width: 700px;
+    border-radius: 20px;
+  }
+
+  header {
+    background-color: #333;
+    padding: 20px 0;
+}
+
+h1 {
+    color: hsl(0, 6%, 3%);
+    margin: 200;
+    display: inline;
+    float: right;
+    margin-right: 150px;
+}
+
+nav {
+    display: inline;
+    float: right; /* Aligns the nav to the right */
+
+    
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline;
+    margin-left: 20px; /* Adjust the spacing between links if needed */
+}
+
+a {
+    color: #141212;
+    text-decoration: none;
+    font-size:x-large;
+    font-style: bold;
+    font-weight: 400;
+}
+
+.buttons{
+    width: 80px;
+    background-color: #141212;
+    padding: 10px;
+    display: inline-block;
+    border-radius: 15px;
+    position: absolute;
+    text-align: center;
+    margin-left: 1400px;
+}
+button{
+    border-radius: 15px;
+    width: 120px;
+    background-color: #333;
+    color: #f1f1f1;
+}

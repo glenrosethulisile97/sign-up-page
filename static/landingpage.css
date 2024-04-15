@@ -1,7 +1,7 @@
 /* Global styles */
 body {
     font-family: Arial, sans-serif;
-    background-image: url(https://i.pinimg.com/564x/86/bb/66/86bb66c977b447c1a329a142d77aa0c6.jpg);
+    background-image: url(https://i.pinimg.com/474x/10/bd/f3/10bdf37ce6fb345ef363e97c516aa78b.jpg);
     background-size: cover;
       
 }
@@ -21,17 +21,18 @@ body, h1, h2, h3, p, ul, li {
 
 /* Header styles */
 header {
-    background-color: #df96d6;
+    background-color: #cfcacab0;
     padding: 20px;
+    margin-left: auto;
 }
 
 header h1 {
-    color: #333;
+    color: #0c0b0b;
 }
 
 /* Navigation menu styles */
 nav {
-    background-color: #c69dc1;
+    background-color: #c3bec397;
 }
 
 nav ul {
@@ -44,7 +45,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #181717;
     text-decoration: none;
 }
 
@@ -65,6 +66,34 @@ h2 {
 #services ul li {
     margin-bottom: 10px;
 }
+.dropdown {  
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    border-radius: 15px;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown-content a {
+    color: hsl(120, 20%, 1%);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
 
 /* Gallery section styles */
 .gallery-images {
@@ -93,3 +122,36 @@ footer {
 .LOGOUT{
     float: right;
 }
+
+.services-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.service {
+    width: calc(33.33% - 20px); /* Adjust width based on the number of services you want to display per row */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.service h2 {
+    margin-top: 0;
+    color: #f9f8f8;
+}
+
+.service p {
+    color: #f7f2f2ed;
+}
+img {
+    width: 400px;
+    height: 400px; /* Maintain aspect ratio */
+  }
+
+ 
+
+ 
