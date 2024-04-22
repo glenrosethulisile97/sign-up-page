@@ -6,8 +6,17 @@ app.config['MONGO_URI'] = 'mongodb://localhost:27017/mydatabase'
 mongo = PyMongo(app)
 db = mongo.db
 
+
+# landing page
+@app.route('/')
+def landing():
+        return render_template("homepage.html")
+
 @app.route('/signup', methods=['GET', 'POST'])
-def signup():
+def signup(): 
+
+
+    
     if request.method == 'POST':
         # Extract form data
         username = request.form['username']
@@ -42,17 +51,30 @@ def login():
 
     # Insert new user into the database
         user = {'username': username, 'password': password}
-        if  db.user.insert_one(user):
-            return render_template ("landingpage.html")
+        if  db.signup.find_one(user):
+            return redirect(url_for("HomePage"))
+        else: redirect(url_for('signup'))
         
 
     # Render the login form template
-    return render_template('login.html')
+    return render_template('loginpage.html')
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/homepage', methods=['GET', 'POST'])
 def HomePage():
     return render_template("landingpage.html")
 
+@app.route('/contact')
+def contact():
+        return render_template("contact.html")
 
-if __name__ == '_main_':
+@app.route('/about')
+def about():
+        return render_template("about.html")
+
+@app.route('/services')
+def services():
+        return render_template("service.html")
+
+
+if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)

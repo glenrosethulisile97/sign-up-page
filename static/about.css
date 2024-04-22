@@ -32,6 +32,7 @@ header h1 {
 
 nav ul {
     list-style-type: none;
+    margin-bottom: 20px;
 }
 
 nav ul li {
@@ -63,4 +64,11 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px;
+    margin-top: 150px;
+}
+p{
+    color: #edebeb;
+}
+h2{
+    color: #edebeb;
 }

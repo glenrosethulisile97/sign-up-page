@@ -1,0 +1,85 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(https://i.pinimg.com/474x/10/bd/f3/10bdf37ce6fb345ef363e97c516aa78b.jpg);
+    background-size: cover;
+}
+/* Navigation menu styles */
+nav {
+    background-color: #c3bec397;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #181717;
+    text-decoration: none;
+}
+.button-container{
+    text-align: right;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: aliceblue;
+  }
+  
+  input[type="text"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #0f0f0f;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #1747d5ac;
+    color: rgba(12, 12, 12, 0.735);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  .label {
+    color: rgba(251, 247, 247, 0.995); 
+  }
+  

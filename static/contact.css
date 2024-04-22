@@ -15,8 +15,7 @@ body, h1, h2, h3, p, ul, li {
 
 
 .container {
-    width: 300px;
-    height: 300ox;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -24,19 +23,11 @@ body, h1, h2, h3, p, ul, li {
 header {
     background-color: #cfcacab0;
     padding: 20px;
-    margin-left: -175px;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
-    font-size: larger;
+    margin-left: auto;
 }
 
 header h1 {
     color: #0c0b0b;
-    text-align: left;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
-    font-size: larger;
-
 }
 
 /* Navigation menu styles */
@@ -82,9 +73,6 @@ section {
 
 h2 {
     margin-bottom: 20px;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
-    font-size: larger;
 }
 
 /* Services section styles */
@@ -176,11 +164,28 @@ footer {
 .service p {
     color: #f7f2f2ed;
 }
-img {
-    width: 400px;
-    height: 400px; /* Maintain aspect ratio */
-  }
-
- 
+    .styled-paragraph {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        color: #333; /* Text color */
+        background-color: #f0f0f0; /* Background color */
+        padding: 20px; /* Padding around the paragraph */
+        border: 1px solid #ccc; /* Border around the paragraph */
+        border-radius: 5px; /* Rounded corners */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle depth effect */
+        width: 300px; /* Set width of the paragraph */
+        margin: 0 auto; /* Center the paragraph horizontally */
+    }
+.img {
+margin-left: 50px;
+}
+ /* Style footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: 180px;
+}
 
  
