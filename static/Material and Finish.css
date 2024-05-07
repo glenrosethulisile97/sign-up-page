@@ -137,13 +137,14 @@ body {
     border-right: 2px solid #ccc; /* Optional: Add a border */
     box-sizing: border-box;
     margin-top: -600px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 15px;
     
   }
 
   /* CSS for the code */
   .code {
-    font-family: "Courier New", Courier, monospace;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     white-space: pre-wrap;
   }
 
@@ -157,16 +158,16 @@ body {
   /* Example CSS code */
   .example-css {
     color: red;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
 
   /* Example HTML code */
   .example-html {
     font-weight: bold;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
   h3 {
     font-weight: lighter;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: medium;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
 }

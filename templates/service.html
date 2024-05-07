@@ -21,16 +21,26 @@
           </ul>
         </nav>
       </body>
+
+      <body>
+        <div class="container">
+            <div class="button-group">
+                <button class="button">Add</button>
+                <button class="button">Update</button>
+                <button class="button">Delete</button>
+            </div>
+        </div>
+        </body>
+        
     
     <body>
         <section class="styled-section">
-          <h2>Concept Design Solutions</h2>
-           
+        <h2 onclick="goToLandingPage1('Concept Design Solutions')">Concept Design Solutions</h2>
         </section>
-        <br><br>
+        <br><br>                                                                                                                       
 
         <section class="styled-section">
-            <h2>Material and Finish Selection</h2>
+          <h2 onclick="goToLandingPage2('Material and Finish')">Material and Finish Selection</h2>
             
           </section>
           <br><br>
@@ -39,13 +49,13 @@
       
 
           <section class="styled-section">
-            <h2>Styling and Decoration</h2>
+            <h2 onclick="goToLandingPage3('Styling and Decoration')">Styling and Decoration</h2>
            
           </section>
           <br><br>
 
           <section class="styled-section">
-            <h2>Renovation and Remodeling</h2>
+            <h2 onclick="goToLandingPage4('Renovation and Remodeling')">Renovation and Remodeling</h2>
           
           </section>
           <br><br>
@@ -62,6 +72,6 @@
           </body>
           </html>
         
-        <script src="" async defer></script>
+          <script src="{{ url_for('static', filename='login page.js') }}"></script>
     </body>
 </html>

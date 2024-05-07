@@ -23,20 +23,20 @@ body, h1, h2, h3, p, ul, li {
 /* Header styles */
 header {
     background-color: #cfcacab0;
-    padding: 20px;
-    margin-left: -175px;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
-    font-size: larger;
+    padding: 5px;
+    margin-left:-1110px;
+    font-stretch: normal;
 }
 
 header h1 {
     color: #0c0b0b;
     text-align: left;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
-    font-size: larger;
+    display: inline;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: xx-large;
 
+    
+    
 }
 
 /* Navigation menu styles */
@@ -45,12 +45,12 @@ nav {
 }
 
 nav ul {
-    list-style-type: none;
+   list-style: none;
 }
 
 nav ul li {
     display: inline-block;
-    margin-right: 20px;
+    margin-right: 30px;
 }
 
 nav ul li a {
@@ -82,9 +82,7 @@ section {
 
 h2 {
     margin-bottom: 20px;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
-    font-size: larger;
+    
 }
 
 /* Services section styles */
@@ -106,7 +104,7 @@ h2 {
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    border-radius: 15px;
+    border-radius: 12px;
   }
   
   .dropdown:hover .dropdown-content {

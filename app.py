@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for
 from flask_pymongo import PyMongo
 
-app = Flask(__name__)
+app = Flask(__name__ , static_url_path='/static')
 app.config['MONGO_URI'] = 'mongodb://localhost:27017/mydatabase'
 mongo = PyMongo(app)
 db = mongo.db
@@ -74,6 +74,26 @@ def about():
 @app.route('/services')
 def services():
         return render_template("service.html")
+
+
+@app.route('/Concept Design')
+def Concept_Design():
+        return render_template("Concept Design.html")
+
+
+@app.route('/Material and Finish')
+def Material_Finish():
+        return render_template("Material and Finish.html")
+
+
+@app.route('/Styling and Decoration')
+def Styling_Decoration():
+        return render_template("Styling and Decoration.html")
+
+
+@app.route('/Renovation and Remodeling')
+def Renovation_Remodeling():
+        return render_template("Renovation and Remodeling.html")
 
 
 if __name__ == '__main__':

@@ -2,70 +2,50 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
-    background-color: #f1f1f1;
-    background-image: url(https://i.pinimg.com/474x/be/fa/38/befa3854aae9e8eac5e1ffdcccb36f34.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-
+    background: #f1f1f1 url(https://i.pinimg.com/474x/be/fa/38/befa3854aae9e8eac5e1ffdcccb36f34.jpg) center/cover no-repeat fixed;
 }
+
 .container {
-    background-color:transparent;
     max-width: 900px;
-    height: 700epx;
-    margin: 0 auto;
-    background-color: hsla(0, 10%, 82%, 0.417);
+    height: 700px; /* 'epx' corrected to 'px' */
+    margin: 100px auto 0;
     padding: 20px;
+    background-color: hsla(0, 10%, 82%, 0.417);
     border-radius: 50px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-left: 300px;
-    border: 3px black;
-    margin-top: 100px;
 }
 
-
-
-  .slide{
+.slide {
     height: 450px;
-    margin-top: 70px;
     width: 700px;
+    margin-top: 30px;
     border-radius: 20px;
-  }
+}
 
-  header {
+header {
     background-color: #333;
     padding: 20px 0;
     font-size: larger;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 100px; /* Removed margin-bottom and duplicate margin-top */
 }
 
 h1 {
-    color: hsla(0, 0%, 4%, 0.951);
-    margin: 200;
-    display: inline;
-    float: right;
-    margin-right: 110px;
-    text-align: center;
-    margin-top: 80px;
+    color: hsla(0, 0%, 5%, 0.864);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: larger;
-    
-    
+    font-size: xx-large;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 100px;
 }
+
 .bold-text {
     font-weight: bold;
-    
+    font-size: large;
 }
 
-nav {
-    display: inline;
-    float: right; /* Aligns the nav to the right */
-    background-color: #f3efefe6;
-    color: #0b0a0a;
-
-    
-}
+/* Removed duplicate 'display' property from 'nav' */
+/* Removed float: right from 'nav' as it's not needed */
 
 ul {
     list-style-type: none;
@@ -75,18 +55,16 @@ ul {
 
 li {
     display: inline;
-    margin-left: 20px; /* Adjust the spacing between links if needed */
+    margin-left: 20px;
 }
 
 a {
     color: #0d0c0cf1;
     text-decoration: none;
-    font-size:x-large;
-    font-style: bold;
-    font-weight: 400;
+    font-size: x-large;
 }
 
-.buttons{
+.buttons {
     width: 80px;
     background-color: #141212;
     padding: 10px;
@@ -94,39 +72,38 @@ a {
     border-radius: 15px;
     position: absolute;
     text-align: center;
-    margin-left: 1400px;
+    right: 20px; /* Adjusted margin-left to right */
 }
 
-  
-  .menu-container {
+.menu-container {
     position: relative;
-  }
-  
-  .menu-btn {
+}
+
+.menu-btn {
     cursor: pointer;
     height: 50px;
     width: 100px;
-  }
-  
-  .menu-btn span {
+}
+
+.menu-btn span {
     display: block;
     width: 80px;
     height: 10px;
     background-color: #4439e3d5;
-    margin-bottom: -100px;
+    margin-bottom: -.5px; /* This value doesn't seem necessary */
     transition: transform 0.3s, opacity 0.3s;
-  }
-  
-  .menu-btn span:last-child {
-    margin-bottom: 300px;
-    margin-top: 100px;
-  }
-  
-  .menu-btn:hover span {
+    border-radius: 20%;
+}
+
+.menu-btn span:last-child {
+    margin-top: 8px; /* Adjusted margin-top */
+}
+
+.menu-btn:hover span {
     background-color: hsl(0, 31%, 95%);
-  }
-  
-  .menu {
+}
+
+.menu {
     position: absolute;
     top: 100%;
     right: 0;
@@ -135,43 +112,44 @@ a {
     border-radius: 5px;
     padding: 10px 0;
     margin-top: 5px;
+    margin-bottom: 80px;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s;
-  }
-  
-  .menu li {
+}
+
+.menu li {
     list-style: none;
-  }
-  
-  .menu li a {
+}
+
+.menu li a {
     display: block;
     padding: 10px 20px;
     color: #333;
     text-decoration: none;
-  }
-  
-  .menu li a:hover {
+}
+
+.menu li a:hover {
     background-color: #f0f0f0;
-  }
-  
-  .hidden {
+}
+
+.hidden {
     display: none;
-  }
-  
-  #menu-toggle:checked + .menu-btn span:nth-child(1) {
+}
+
+#menu-toggle:checked + .menu-btn span:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
-  }
-  
-  #menu-toggle:checked + .menu-btn span:nth-child(2) {
+}
+
+#menu-toggle:checked + .menu-btn span:nth-child(2) {
     opacity: 0;
-  }
-  
-  #menu-toggle:checked + .menu-btn span:nth-child(3) {
+}
+
+#menu-toggle:checked + .menu-btn span:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
-  }
-  
-  #menu-toggle:checked ~ .menu {
+}
+
+#menu-toggle:checked ~ .menu {
     opacity: 1;
     pointer-events: auto;
-  }
+}
