@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Service Form</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="/static/delete_booking.css">
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="Image-container">
+            <form action="/delete_booking" method="post">
+               <div class="form">
+                   <center><h1>Delete Service</h1></center>
+                       <center><h2>booking</h2></center>
+                           <br><br><br>
+            
+                                   <input type="text" id= "name" name = "Name" required>
+                                   <input type="text" id="email" email="Email" required>
+                                   <input type="text" id= "color" color = "Color" required>
+                                   <input type="number" id= "offices" offices = "Offices" maxlength="5" required>
+                                   <input type="number" id= "size" size = "size" maxlength="5" required>
+                                   
+                                    <input type="hidden" name="delete_booking" value="{{ row._id }}">
+                                    <center><button type="submit">Delete</button></center>
+                                      
+      </div> 
+     </form> 
+   </div> 
+ </div>  
+    <script src=""></script> 
+</body>
+</html>

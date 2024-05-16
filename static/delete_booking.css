@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(https://i.pinimg.com/564x/09/94/ec/0994eccaab2f8a218f67f0731d9f38be.jpg);
+    position: relative;
+    background-size: cover;
+}
+.container{
+    max-width: 700px; /* or any other fixed width */
+    margin: 0 auto; /* center the container horizontally */
+    display: flex;
+    background-color: rgb(248, 246, 243);
+    height: 700px;
+    margin-top: 100px;
+    opacity: 0.9;
+    border-radius: 15px;
+
+}
+
+h1 {
+    margin-bottom: 50px;
+}
+
+
+li {
+    margin-bottom: 30px;
+}
+
+.form {
+    margin-bottom: 20px;
+    margin-top: 100px;
+    margin-left: 110px;
+    border: #596e5a;
+}
+
+input[type="text"],
+input[type="number"] {
+    padding: 5px;
+    width: 200px;
+    margin: 10px;
+}
+
+button[type="submit"] {
+    background-color: hsl(124, 7%, 59%);
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 120px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: aqua;
+}
+
+.sidebar {
+    height:800px;
+    width: 250px;
+    background-color: #DDD0C0;
+    color: #030303;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    color: #050505;
+    text-decoration: none;
+}
+
+.content {
+    background-color: aliceblue;
+    flex: 1;
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 1200px;
+}
+
+Copy code
+/* Reset default margin and padding */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style header */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-left: 80px;
+}

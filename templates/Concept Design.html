@@ -20,11 +20,14 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/signup"><h1>Concept Design Solution</h1></a>
+                <a class="nav-link active" aria-current="page" href="/signup"></a>
+                 <h2>Concept Design Solution</h2>
+                 
               </li>
               
-              </li>
-             
+            </div>
+          </div>
+          </li>
             </ul>
            
           </div>
@@ -77,28 +80,38 @@
 
 
     <body>
+      <div class="code-container">
+        <h2>Service Offered</h2>
+        <div class="code example-html">
 
-        <div class="code-container">
-          <h2>Service Offered</h2>
-          <div class="code example-html">
-
-<h3>The designer meets with the client to discuss their needs, goals, and aesthetic preferences for the project. This involves understanding the client's lifestyle, tastes, and any specific requirements they may have.</h3>
-
-          </div>
-          <h2>WE DO:</h2>
-          <div class="bullet-list">
-            <ul>
-              <li>Coastal Retreat</li>
-              <li>Urban Loft</li>
-              <li>Luxury High-End</li>
-              <li>Green Living</li>
-            </ul>
-            
-
-        
- 
-          </div>
+<h3>Interior material finishes play a crucial role in shaping the look, feel, and functionality of a space. </h3>
         </div>
+        <h2>WE DO:</h2>
+        <div class="bullet-list">
+          <ul>
+            <li>Tile</li>
+            <li>Laminate</li>
+            <li>Paint</li>
+            <li>Wood</li>
+            <li>Fabric</li>
+          </ul>
+          
+
+        </div>
+   
+        </div>
+    </div>
+    
+     
+    <body>
+      <form action="/AddBooking" method="post">
+        <input type="hidden" id="Book" name="Book" value="Book"><br><br>
+        <input type="submit" value="Book">
+      </form>
+      <!-- <a href="/AddBooking"></a><button class="book-now-btn">Book Now</button> -->
+    
+    </body>
+    </html>
         
         <div class="clearfix"></div>
         
@@ -107,9 +120,10 @@
         </body>
 
 
-
+        <script src="{{ url_for('static', filename='landingpage.js') }}"></script> 
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
       <script src="{{ url_for('static', filename='landing.js') }}"></script>
-      <script src="/landing.js"></script>
+   
+
 </body>
 </html>

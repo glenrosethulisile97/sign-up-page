@@ -40,7 +40,7 @@ body {
   .navbar{
     background-color: #dacdcdd6;
     width: 1600px;
-    height: 70px;
+    height: 90px;
     position: relative;
     position: fixed;
     margin-left: -20px;
@@ -171,4 +171,74 @@ h3 {
     font-weight: lighter;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: medium;
+}
+.container {
+  position: relative; /* Ensure relative positioning for absolute positioning */
+ 
+}
+
+
+
+.btn-group {
+  display: flex; /* Use flexbox to align items */
+  justify-content: flex-end; /* Align items to the end of the container */
+  margin-top: 20px;
+}
+
+/* Optional: Adjust margin for spacing */
+.btn-group label {
+  margin-right: 10px; /* Add some space between buttons */
+}
+
+
+/* Optional: Adjust styles for the buttons */
+.btn-group label {
+  margin-right: 10px; /* Add some space between buttons */
+  margin-left: 900px;
+  float: left;
+  justify-content: space-around;
+  margin-right: 20px;
+}
+.book-now-btn {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin : 4px 2px;
+  margin-top: -500px;
+  margin-bottom: 50px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.book-now-btn:hover {
+  background-color: #45a049; /* Darker Green */
+}
+
+form {
+  text-align: left; /* Align the form contents to the center */
+  margin-top: -150px;
+  margin-bottom: -500px; 
+
+}
+
+input[type="submit"] {
+  background-color: #b7e8b9; /* Blue background color */
+  color: #0c0b0bd5; /* White text color */
+  padding: 10px 20px; /* Padding around the button text */
+  border: none; /* No border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Show pointer cursor on hover */
+  font-size: 16px; /* Font size */
+  transition: background-color 0.3s; /* Smooth transition for background color change */
+  margin-top: -100px;
+  margin-bottom: -200px;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3; /* Darker blue background color on hover */
 }

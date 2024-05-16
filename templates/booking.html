@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Booking Form</title>
+        <meta name="description" content="Booking form page">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/static/booking.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Booking</h1>
+           
+            <!-- Button to AddBooking Page -->
+            <a href="/AddBooking"><button type="button">Book Now</button></a>
+           
+            
+            
+            <!-- Booking details table -->
+            <table action="/Booking" method="Get" border="1">
+                
+                <thead>
+                    <tr>
+                        <th>Client Name</th>
+                        <th>Email</th>
+                        <th>Preferred Colors</th>
+                        <th>Number of Offices</th>
+                        <th>Size in Square Metres</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Loop through bookings (assumes you have server data) -->
+                    {% for booking in booking %}
+                    <tr>
+                        <td>{{ booking.name }}</td>
+                        <td>{{ booking.email }}</td>
+                        <td>{{ booking.color }}</td>
+                        <td>{{ booking.offices }}</td>
+                        <td>{{ booking.size  }}</td>
+                        <td>
+                            <form action="/delete_booking" method="post">
+                                <input type="hidden" id="delete_id" name="delete_id" value={{booking._id}}>
+                                <input type="hidden" id="delete_id" email="delete_id" value={{booking._id}}>
+                                <input type="hidden" id="delete_id" color="delete_id" value={{booking._id}}>
+                                <input type="hidden" id="delete_id" offices="delete_id" value={{booking._id}}>
+                                <input type="hidden" id="delete_id" size="delete_id" value={{booking._id}}>
+                                <input type="submit" value="Delete">
+                              </form>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
