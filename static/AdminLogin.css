@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(https://i.pinimg.com/474x/10/bd/f3/10bdf37ce6fb345ef363e97c516aa78b.jpg);
+    background-size: cover;
+    color: white; /* Set text color to white */
+  }
+  
+  nav {
+    display: inline;
+    float: right; /* Aligns the nav to the right */
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    display: inline;
+    margin-left: 20px; /* Adjust the spacing between links if needed */
+  }
+  
+  a {
+    color: #f0ebeb;
+    text-decoration: none;
+    font-size: x-large;
+    font-weight: bold;
+  }
+  
+  .container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #b8afb8ca;
+    border-radius: 5px;
+    background-color: transparent;
+  }
+  
+  .form-group {
+    margin-bottom: 60px;
+    margin-top: 20px;
+  }
+  
+  .label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .label,
+  .h2,
+  .h5 {
+    color: white; /* Set text color to white */
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    background-color: #eae1e1;
+    color: #010101;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #2aedcf;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  

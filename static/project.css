@@ -9,19 +9,178 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-/* Set video to cover the entire viewport */
-video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensure the video covers the entire area */
-    z-index: -1; /* Place the video behind other content */
-}
-
-/* Remove default margin and padding from the body */
-body {
+/* Resetting default margins and paddings */
+body, h1, h2, h3, p, ul, li {
     margin: 0;
     padding: 0;
 }
+
+
+.container {
+    width: 300px;
+    height: 300ox;
+    margin: 0 auto;
+}
+
+/* Header styles */
+header {
+    background-color: #cfcacab0;
+    padding: 5px;
+    margin-left:-1110px;
+    font-stretch: normal;
+}
+
+header h1 {
+    color: #0c0b0b;
+    text-align: left;
+    display: inline;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: xx-large;
+
+    
+    
+}
+
+/* Navigation menu styles */
+nav {
+    background-color: #c3bec397;
+}
+
+nav ul {
+   list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+nav ul li a {
+    color: #181717;
+    text-decoration: none;
+}
+.button-container{
+    text-align: right;
+}
+
+.button {
+  padding: 8px 16px;
+  margin-left: 8px;
+  background-color: #d0d7daa4;
+  color: rgba(11, 10, 10, 0.744);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #0e0f0ebd;
+}
+
+/* Main content section styles */
+section {
+    margin-top: 40px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    
+}
+
+/* Services section styles */
+#services ul {
+    list-style-type: none;
+}
+
+#services ul li {
+    margin-bottom: 10px;
+}
+.dropdown {  
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    border-radius: 12px;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown-content a {
+    color: hsl(120, 20%, 1%);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+
+/* Gallery section styles */
+.gallery-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.gallery-images img {
+    width: calc(33.33% - 10px);
+    margin-bottom: 20px;
+}
+
+/* Contact section styles */
+#contact p {
+    margin-bottom: 10px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+.LOGOUT{
+    float: right;
+}
+
+.services-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.service {
+    width: calc(33.33% - 20px); /* Adjust width based on the number of services you want to display per row */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.service h2 {
+    margin-top: 0;
+    color: #f9f8f8;
+}
+
+.service p {
+    color: #f7f2f2ed;
+}
+img {
+    width: 400px;
+    height: 400px; /* Maintain aspect ratio */
+  }
+
+ 
+
+ 
