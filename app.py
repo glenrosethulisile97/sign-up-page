@@ -38,8 +38,35 @@ def signup():
     # Render the signup form template
     return render_template('signup.html')
 
-# Login Page
+#Admin Signup
+@app.route('/AdminSignup', methods=['GET', 'POST'])
+def AdminSignup(): 
 
+
+    
+    if request.method == 'POST':
+        # Extract form data
+        username = request.form['username']
+        email = request.form['email']
+        password = request.form['password']
+
+        # Check if username or email already exists
+        existing_user = db.Admin.find_one({'$or': [{'username': username}, {'email': email}]})
+        if existing_user:
+            return 'Username or email already exists!'
+
+        # Insert new user into the database
+        signupdetails = {'username': username, 'email': email, 'password': password}
+        db.Admin.insert_one(signupdetails)
+        
+        # Redirect to login page or homepage
+        return redirect(url_for('AdminLogin'))
+
+    # Render the signup form template
+    return render_template('AdminSignup.html')
+
+
+# Login Page
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
@@ -59,9 +86,37 @@ def login():
     # Render the login form template
     return render_template('loginpage.html')
 
+#Admin login
+@app.route('/AdminLogin', methods=['GET', 'POST'])
+def AdminLogin():
+    if request.method == 'POST':
+        # Extract form data
+        username = request.form['username']
+        password = request.form['password']
+
+       
+
+    # Insert new user into the database
+        user = {'username': username, 'password': password}
+        if  db.Admin.find_one(user):
+            return redirect(url_for("Dashboard"))
+        else: redirect(url_for('AdminSignup'))
+        
+
+    # Render the login form template
+    return render_template('AdminLogin.html')\
+    
+#Home Client
 @app.route('/homepage', methods=['GET', 'POST'])
 def HomePage():
     return render_template("landingpage.html")
+
+#Dashboard
+@app.route('/dasboard', methods=['GET', 'POST'])
+def Dashboard():
+    return render_template("adminDashboard.html")
+
+
 
 @app.route('/contact')
 def contact():
@@ -71,9 +126,38 @@ def contact():
 def about():
         return render_template("about.html")
 
-@app.route('/services')
-def services():
-        return render_template("service.html")
+
+# #Display Service
+# @app.route('/services')
+# def services():
+#         return render_template("service.html")
+
+# Display AdminService
+@app.route("/AdminServices", methods=["GET"])
+def AdminServices():
+    service = db.Services.find()  
+    return render_template("AdminService.html", service = service)
+
+#Add Service
+@app.route('/AddService', methods=["POST", "GET"])
+
+def AddService():
+    if request.method == 'POST':
+        title = request.form['title']
+
+        service = {'title': title}
+
+        # Insert breakfast into MongoDB
+        db.Services.insert_one(service)
+        return redirect(url_for('AdminServices'))  
+
+    return render_template("AddService.html")
+
+# Display Service
+@app.route("/services", methods=["GET"])
+def services(): 
+    return render_template("service.html",)
+
 
 
 @app.route('/Concept Design')

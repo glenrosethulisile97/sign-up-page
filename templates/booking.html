@@ -48,6 +48,16 @@
                                 <input type="submit" value="Delete">
                               </form>
                         </td>
+                        <td>
+                            <form action="/EDIT_booking" method="post">
+                                <input type="hidden" id="Update_id" name="Update_id" value={{booking._id}}>
+                                <input type="hidden" id="Update_id" email="Update_id" value={{booking._id}}>
+                                <input type="hidden" id="Update_id" color="Update_id" value={{booking._id}}>
+                                <input type="hidden" id="Update_id" offices="Update_id" value={{booking._id}}>
+                                <input type="hidden" id="Update_id" size="Update_id" value={{booking._id}}>
+                                <input type="submit" value="Update">
+                              </form>
+                        </td>
                     </tr>
                     {% endfor %}
                 </tbody>

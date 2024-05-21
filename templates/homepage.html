@@ -75,9 +75,22 @@
                       <input type="checkbox" id="menu-toggle" class="hidden">
                       <label for="menu-toggle" class="menu-btn"><span></span></label>
                       <ul class="menu">
-                        <li><a href="/login">Login</a></li>
-                        <li><a href="/signup">Sign Up</a></li>
-                        
+                        <li class="dropdown">
+                          <a href="/login" class="dropbtn">Login</a>
+                          <div class="dropdown-content">
+                            <a href="/login">Client</a>
+                            <a href="/AdminLogin">Admin</a>
+                          </div>
+                        </li>
+
+                           <!-- Signup -->
+                        <li class="dropdown">
+                          <a href="#" class="dropbtn">Sign Up</a>
+                          <div class="dropdown-content">
+                            <a href="/signup">Client</a>
+                            <a href="/AdminSignup">Admin</a>
+                          </div>
+                        </li>
                       </ul>
                     </div>
                   </div>

@@ -7,13 +7,13 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="/static/services.css">
+        <link rel="stylesheet" href="/static/AdminService.css">
     </head>
 
     <body>
         <nav class="navbar">
           <h1 class="logo">Modern Maven Interiors</h1>
-          <ul class="nav-links">
+           <ul class="nav-links">
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Services</a></li>
@@ -26,14 +26,17 @@
         
     
     <body>
+        <div class="in-buttons">
+            <a href="/AddService"><button id="addButton">Add</button></a>
+            <a href="/Editbreakfast"><button id="addButton">Edit</button></a>
+        </div>
 
-      <!-- <section class="recipes">
+      <section class="recipes">
         {% for service in breakfast %}
         <div class="recipe">
-            <h2 class="recipe-title">Title: {{ service.title }}</h2> -->
-            <!-- <p>Ingredients: {{ recipe.ingredients }}</p>
-            <p>Instructions: {{ recipe.instruction }}</p> -->
-            <!-- <form action="{{ url_for('delete_card', card_id=recipe._id) }}" method="post">
+            <h2 class="recipe-title">Title: {{ service.title }}</h2>
+
+            <form action="{{ url_for('delete_card', card_id=service._id) }}" method="post">
                 <button type="submit">Delete</button>
             </form>
             <form action="{{ url_for('delete_card', card_id=recipe._id) }}" method="post">
@@ -42,8 +45,8 @@
             
         </div>
         {% endfor %}
-    </section> -->
-        <section class="styled-section">
+    </section>
+        <!-- <section class="styled-section">
         <h2 onclick="goToLandingPage1('Concept Design Solutions')">Concept Design Solutions</h2>
         </section>
         <br><br>                                                                                                                       
@@ -67,16 +70,16 @@
             <h2 onclick="goToLandingPage4('Renovation and Remodeling')">Renovation and Remodeling</h2>
           
           </section>
-          <br><br>
+          <br><br> -->
 
           
       </body>
      
         
                 
-         <footer>
+         <!-- <footer>
            2024 Interior Design Company. All rights reserved.
-          </footer>
+          </footer> -->
           
           </body>
           </html>
