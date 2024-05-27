@@ -4,76 +4,284 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Employees Board</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/static/emloyees.css">
 </head>
 <body>
-    <div class="board">
-        <h1>Employees Board</h1>
-        <table>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Age</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>John Doe</td>
-                    <td>28</td>
-                </tr>
-                <tr>
-                    <td>Jane Smith</td>
-                    <td>34</td>
-                </tr>
-                <tr>
-                    <td>Emily Johnson</td>
-                    <td>25</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h3 class="brand">
+                  
+                  <span>Modern Maven Interiors</span>
+                </h3>
+                
+              </div>
+              <br><br><br><br>
+              <div class="sidebar-header">
+                <h3 class="brand">
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-grid-1x2-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M0 1a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm9 0a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1V1zm0 9a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-5z"
+                      />
+                    </svg>
+                  </span>
+                  <span>DASHBOARD</span>
+                </h3>
+                
+              </div>
+              <br><br><br><br><br>
+            <ul>
+                <li>
+                    <a href="#">
+                      <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-day" viewBox="0 0 16 16">
+                            <path d="M4.684 11.523v-2.3h2.261v-.61H4.684V6.801h2.464v-.61H4v5.332zm3.296 0h.676V8.98c0-.554.227-1.007.953-1.007.125 0 .258.004.329.015v-.613a2 2 0 0 0-.254-.02c-.582 0-.891.32-1.012.567h-.02v-.504H7.98zm2.805-5.093c0 .238.192.425.43.425a.428.428 0 1 0 0-.855.426.426 0 0 0-.43.43m.094 5.093h.672V7.418h-.672z"/>
+                            <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/>
+                          </svg>
+                      </span>
+                      <span>Appointments</span>
+                    </a>
+                  </li>
+                </li>
+                <br>
+                <li><a href="#">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bank" viewBox="0 0 16 16">
+                            <path d="m8 0 6.61 3h.89a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v7a.5.5 0 0 1 .485.38l.5 2a.498.498 0 0 1-.485.62H.5a.498.498 0 0 1-.485-.62l.5-2A.5.5 0 0 1 1 13V6H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 3h.89zM3.777 3h8.447L8 1zM2 6v7h1V6zm2 0v7h2.5V6zm3.5 0v7h1V6zm2 0v7H12V6zM13 6v7h1V6zm2-1V4H1v1zm-.39 9H1.39l-.25 1h13.72z"/>
+                          </svg>
+                      </span>
+                      <span>Finances</span>
+                </a></li>
+                <br>
+                <li class="dropdown"><a href="#">
+                  <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-scissors" viewBox="0 0 16 16">
+                          <path d="M3.5 3.5c-.614-.884-.074-1.962.858-2.5L8 7.226 11.642 1c.932.538 1.472 1.616.858 2.5L8.81 8.61l1.556 2.661a2.5 2.5 0 1 1-.794.637L8 9.73l-1.572 2.177a2.5 2.5 0 1 1-.794-.637L7.19 8.61zm2.5 10a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0m7 0a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0"/>
+                        </svg>
+                    </span>
+                    
+                    <span>Services</span>
+                    <div class="dropdown-content">
+                      <b><a href="http://127.0.0.1:5501/Online%20Store/consumables.html">Hair Cuts</a></b>
+                      <b><a href="http://127.0.0.1:5500/static/templates/hairstyle.html">Hairstyle</a></b>
+                      <b><a href="http://127.0.0.1:5500/nails.html">Nails</a></b>
+                      <b><a href="http://127.0.0.1:5500/Makeup.html">Make-Up</Make-Up></a></b>
+                      <b><a href="http://127.0.0.1:5500/Templates/Weave%20installation.html">Weave Installations</a></b>
+                    </div>
+              </a></li>
+                <br><br>
+                <li><a href="#">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-badge-fill" viewBox="0 0 16 16">
+                            <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2zm4.5 0a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1zM8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6m5 2.755C12.146 12.825 10.623 12 8 12s-4.146.826-5 1.755V14a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1z"/>
+                          </svg>
+                      </span>
+                      <span>Employees</span>
+                </a></li><br>
+                <li><a href="#">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
+                            <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4"/>
+                          </svg>
+                      </span>
+                      <span>Clients</span>
+                </a></li><br>
+                <li><a href="#">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-quote" viewBox="0 0 16 16">
+                            <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388q0-.527.062-1.054.093-.558.31-.992t.559-.683q.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 9 7.558V11a1 1 0 0 0 1 1zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612q0-.527.062-1.054.094-.558.31-.992.217-.434.559-.683.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 3 7.558V11a1 1 0 0 0 1 1z"/>
+                          </svg>
+                      </span>
+                      <span>Reviews</span>
+                </a></li><br>
+                <li><a href="#">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar2-week" viewBox="0 0 16 16">
+                            <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1z"/>
+                            <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5zM11 7.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z"/>
+                          </svg>
+                      </span>
+                      <span>Bookings</span>
+                </a></li><br>
+                
+            </ul>
+        </div>
+        <div class="content">
+            <h1>Employees</h1>
+            <p></p>
+            <div class="button-container">
+                <button>Add</button>
+                <button>Update</button>
+                <button>Delete</button>
+
+            </div>
+
+<br><br>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+      <div class="container text-center">
+        <div class="row mt-3">
+          <div class="col mx-4">
+         
+            <div class="card-employeeV">
+                <img src="/image 39.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                
+                  <p class="card-text">VINCENT MAHLANGU
+                    SALON MANAGER 
+                    Contact: 076 667 4523
+                    email: luke@gmail.com
+                    address: 12 thish st hillbrow 2000
+                </div>
+              </div>
+          </div>
+          <div class="col mx-7                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ">
+        
+            <div class="card-employeeP">
+                <img src="/image 40.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    
+                  <p class="card-text">Name: PATRIC MANYI
+                    Title: HAIRSTYLIST
+                    Contact: 076 667 4523
+                    email: luke@gmail.com
+                    address: 12 thish st hillbrow 2000</p>
+                 
+                </div>
+
+              </div>
+          </div>
+          <div class="col mx-7">
+            
+            <div class="card-employeeL">
+                <img src="/image 41.png" class="card-img-top" alt="...">
+                <div class="card-body">
+             
+                  <p class="card-text">Name:LUKE MBATHA
+                    Title: HAIR BARBER
+                    Contact: 076 667 4523
+                    email: luke@gmail.com
+                    address: 12 thish st hillbrow 2000</p>
+                  
+                </div>
+
+              
+
+              </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="container text-center">
+                    <div class="row mt-7">
+                      <div class="col mx-4">
+                        
+                        <div class="card-employeeM" >
+                            <img src="/image 42.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+
+                              <p class="card-text">Name: MARRY MANTSHO
+                                Title: NAIL TECHNICIAN
+                                Contact: 076 667 4523
+                                email: luke@gmail.com
+                                address: 12 thish st hillbrow 2000</p>
+                              
+                            </div>
+
+                        
+
+                          </div>
+                      </div>
+                      <div class="col">
+                        
+                        <div class="card-employeeR">
+                            <img src="/image 43.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+        
+                              <p class="card-text">Name: RUBY DUBE
+                                Title: HAIRSTYLIST
+                                Contact: 076 667 4523
+                                email: luke@gmail.com
+                                address: 12 thish st hillbrow 2000</p>
+                              
+                            </div>
+
+                       
+
+                          </div>
+                      </div>
+                      <div class="col">
+                        
+                        <div class="card-employeePR" >
+                            <img src="/WhatsApp Image 2024-01-17 at 15.26 2.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                
+                              <p class="card-text">Name: PORTIA MALULEKA
+                                Title: SALON ADMIN
+                                Contact: 076 667 4523
+                                email: luke@gmail.com
+                                address: 12 thish st hillbrow 2000</p>
+                              
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <br>
+                    <div class="container text-center">
+                        <div class="row mt-5">
+                          <div class="col mx-3">
+                            <div class="card-employeeRK">
+                                <img src="/WhatsApp Image 2024-01-17 at 15.26 4.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+            
+                                  <p class="card-text">Name: ROSE KGOMO
+                                    Title: HAIRSTYLIST
+                                    Contact: 076 667 4523
+                                    email: luke@gmail.com
+                                    address: 12 thish st hillbrow 2000</p>
+                                  
+                                </div>
+                           
+                              </div>
+                          </div>
+                         
+                            
+                            
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+
+                  
+   
 </body>
 </html>
-CSS (styles.css)
-css
-Copy code
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
+    
+    <script src="/static/employees.js" async defer></script>
+</body>
+</html>
+</html>
 
-.board {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-h1 {
-    margin-bottom: 20px;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-table, th, td {
-    border: 1px solid #ddd;
-}
-
-th, td {
-    padding: 12px;
-    text-align: left;
-}
-
-th {
-    background-color: #f2f2f2;
-}
-Explanation

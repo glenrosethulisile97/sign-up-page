@@ -11,29 +11,25 @@
 
       <body>
 
-        <div class="container">
-          
-          <h1>Consultation Booking Confirmation</h1>
-          <p>Dear </p>
-
-          <p>We're pleased to confirm your consultation booking with us. Below are the details:</p>
-
-          <div class="details">
-            <p><strong>Date:</strong></p>
-            <p><strong>Time:</strong> </p>
-            <p><strong>Duration:</strong></p>
-            <p><strong>Consultant:</strong></p>
-            <p><strong>Purpose:</strong></p>
-          </div>
-          <p>Please ensure that you arrive promptly for your consultation. If for any reason you need to reschedule or if you have any questions, feel free to reach out to us.</p>
-          <p>We look forward to meeting with you and addressing your needs during the consultation.</p>
+            <form action="/confirmation" method="post">
+            <div class="container">  
+            <div class="profile">
+               
+            <center><h1>THANK YOU!!</h1></center>
 
 
-          <div class="contact-info">
-            <p>Best regards,</p>
-            <p>maven Modern interior</p>
-            <p>concept designer</p>
-            <p>0115009876</p>
+                <p>name: {{booking. name}}</p>
+                <p>email: {{booking. email}}</p>
+                <p>color :{{booking.color}}</p>
+                <p>size :{{booking.size}}</p>
+                <p>offices :{{booking.offices}}</p>
+
+                <p>Please ensure that you arrive promptly for your consultation. If for any reason you need to reschedule or if you have any questions, feel free to reach out to us.</p>
+                <p>We look forward to meeting with you and addressing your needs during the consultation.</p>
+      
+
+           <a href="/#"></a><button onclick="goToLandingPage17('booking')">Done</button>
+
           </div>
         </div>
       
@@ -41,5 +37,8 @@
       
       </form>
     </div>
+
+    <script src="/static/login page.js"></script>
   
   </body>
+  </html>

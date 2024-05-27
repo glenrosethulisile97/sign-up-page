@@ -42,3 +42,38 @@ h1 {
     position: relative;
     font-size: larger;
 }
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #d0b9a3da;
+    border-radius: 5px;
+    border-radius: 20px;
+    margin-top: 40px;
+    width: 3000px;
+    
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .booking-list {
+    margin-top: 20px;
+  }
+  
+  .booking {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #d0b9a3da;
+    border-radius: 5px;
+    
+  }
+  
+  .booking h2 {
+    margin-top: 0;
+  }
+  
+  .booking p {
+    margin: 10px 0;
+  }

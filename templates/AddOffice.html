@@ -25,9 +25,22 @@
                 </ul>
             </div>
         </nav>
+
+
+        <div id="popup" class="popup" style="display: none;">
+            <div class="popup-content">
+                <h1>Thank you</h1>
+                <h2>Thank you for your booking.</h2>
+                <p>Modern maven interiors will be in contact with you shortly</p>
+                <p>Feel free to reschedule on the next page.</p>
+                <button class="btn btn-primary" id="close-popup">Close</button>
+            </div>
+        </div>
+
+
         <div class="container">
             <h2>Booking Form</h2>
-            <form action="AddBooking" method="post">
+            <form action="AddBooking" method="post" id="inquiry-form">
                 <div class="form-group">
                     <label for="name">Client Name:</label>
                     <input type="text" id="name" name="name" required>
@@ -52,6 +65,46 @@
             </form>
         </div>
 
-        <script src="" async defer></script>
+
+       
+
+
+
+        <script>
+        document.getElementById('inquiry-form').addEventListener('submit', async function(event) {
+            event.preventDefault();
+        
+            const form = event.target;
+            const formData = new FormData(form);
+        
+            try {
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    body: new URLSearchParams(formData)
+                });
+        
+                if (response.ok) {
+                    document.getElementById('popup').style.display = 'block';
+                } else {
+                    alert('Failed to submit enquiry');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred while submitting the enquiry');
+            }
+        });
+        
+        document.getElementById('close-popup').addEventListener('click', function() {
+            document.getElementById('popup').style.display = 'none';
+        
+            {
+                // Replace the URL "/landing-page" with the actual URL or route of the landing page
+               window.location.href = "http://127.0.0.1:5000/booking";
+               }
+        });
+
+    </script>
+
+      
     </body>
 </html>

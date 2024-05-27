@@ -139,7 +139,7 @@ def AdminServices():
     return render_template("AdminService.html", service = service)
 
 #Add Service
-@app.route('/AddService', methods=["POST", "GET"])
+@app.route('/AddService.html', methods=["POST", "GET"])
 
 def AddService():
     if request.method == 'POST':
@@ -147,11 +147,11 @@ def AddService():
 
         service = {'title': title}
 
-        # Insert breakfast into MongoDB
+        # Insert Service into MongoDB
         db.Services.insert_one(service)
-        return redirect(url_for('AdminServices'))  
+        return redirect(url_for("AdminServices"))  
 
-    return render_template("AddService.html")
+    return render_template("AdminService.html",service = service)
 
 # Display Service
 @app.route("/services", methods=["GET"])
@@ -216,8 +216,13 @@ def add_item():
 
 #      return render_template("explain.html" , user = user )
 
+@app.route('/AddOffice', methods=["POST"])
+def add():   
+    if request.method == 'POST':
+        return render_template("AddOffice.html")
+    return render_template("AddOffice.html")
 
-#Add  Booking
+#Add Booking
 @app.route("/AddBooking", methods=["GET", "POST"])
 def addbooking():
     if request.method == 'POST':
@@ -229,20 +234,33 @@ def addbooking():
 
         booking = {"name": name, "email": email, "color": color, "offices": offices, "size": size}
         db.bookings.insert_one(booking)
-        return redirect(url_for("getBooking"))  # Redirect to the bookings page after successful submission
+        return redirect(url_for("Confirmation"))  # Redirect to the bookings page after successful submission
 
     return render_template("AddOffice.html")
+
 #Booking
-@app.route("/booking", methods=["POST", "GET"] )
+@app.route("/booking", methods=["POST", "GET"])
 def getBooking():
+    booking = []
+    if request.method == 'GET':
+        for i in db.bookings.find():
+            booking.append(i)
+
+    return render_template("booking.html", booking=booking)
+
+
+     
+@app.route("/confirmation", methods=["POST", "GET"] )
+def Confirmation():
      if request.method == 'GET':
           booking = []
 
           for i in db.bookings.find():
             booking.append(i)
+            
           
 
-          return render_template("booking.html" , booking=booking )
+     return render_template("confirmation.html" , booking=booking )    
 
 #delete booking
 @app.route('/delete_booking', methods=['POST'])
@@ -262,12 +280,49 @@ def delete_booking():
         return render_template('booking.html', booking=booking)
     else:
             return 'Record not found or could not be deleted.'
+    
+
+@app.route('/Editbooking', methods=['POST'])
+def Edit_booking():
+    if request.method == 'POST':
+        bookings_id = request.form.get('id')
+        name = request.form.get("name")
+        email = request.form.get("email")
+        color = request.form.get("color")
+        offices = request.form.get("offices")
+        size = request.form.get("size")
+        # Convert the string ID to ObjectId
+        bookings_id = ObjectId(bookings_id)
+        # Edit the record from the collection
+
+    booking = db.bookings.update_one({'_id':bookings_id},{'$set' :{"name": name, "email": email, "color": color, "offices": offices, "size": size}})
+    booking=[]
+
+    for i in db.bookings.find():
+          booking.append(i)
+          return render_template('booking.html', booking=booking)
+
+@app.route('/Edit_booking1', methods=['POST'])
+def Edit_booking1():
+    if request.method == 'POST':
+        bookings_id = request.form.get('update_id')
+        name = request.form.get("name")
+        email = request.form.get("email")
+        color = request.form.get("color")
+        offices = request.form.get("offices")
+        size = request.form.get("size")
+
+    return render_template('Editbooking.html', name=name, email=email, color=color, offices=offices, size=size,  bookings_id = bookings_id,)
+
 
 @app.route('/')
 def getbooking():
     # Fetch data from the collection
-    booking = db.booking.find(booking)
+    booking = db.bookings.find(booking)
     return render_template('booking.html', booking=booking)
+
+
+
     
 
 if __name__ == "__main__":
