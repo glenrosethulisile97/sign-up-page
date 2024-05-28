@@ -330,21 +330,24 @@ def getbooking():
 def AddService1():
     if request.method == 'POST':
         name = request.form['name']
-        catagory = request.form['catagory']
+        category = request.form['category']
         description = request.form['description']
         
         
-        Service = { 'name': name, 'catagory': catagory, 'description': description}
+        Service = { 'name': name, 'category': category, 'description': description}
 
         db.Services.insert_one(Service)
         if ('form submission success'):
-                     return redirect (url_for('Adminservice'))
+              
+              return render_template("AdminService.html")
         else:
 
                   if ('form submission failed'):
                    return 'form unsuccessful'
+    else:
+      services= db.Services.find()
         
-    return render_template("AddService.html")
+    return render_template("AddService.html",services=services)
 
 
 # Display service

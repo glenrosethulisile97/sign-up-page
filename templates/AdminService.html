@@ -45,10 +45,10 @@
                 </tr>
             </thead>
             <tbody>
-                {% for i in x %}
+                {% for i in service %}
                 <tr>
                     <td>{{ i.name }}</td>
-                    <td>{{ i.catagory }}</td>
+                    <td>{{ i.category }}</td>
                     <td>{{ i.description}}</td>
                     
                     <td>
@@ -61,7 +61,7 @@
                         <form action="/Edit_Service1" method="post">
                             <input type="hidden" id="update_id" name="update_id" value={{i._id}}>
                             <input type="hidden" id="name" name="name" value={{i._name}}>
-                            <input type="hidden" id="catagory" name="catagory" value={{i.catagory}}>
+                            <input type="hidden" id="category" name="catagory" value={{i.catagory}}>
                             <input type="hidden" id="description" name="description" value={{i.description}}>
                             <input type="submit" value="Update">
                         </form>
