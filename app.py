@@ -285,19 +285,19 @@ def delete_booking():
 @app.route('/Editbooking', methods=['POST'])
 def Edit_booking():
     if request.method == 'POST':
-        bookings_id = request.form.get('id')
+        booking_id = request.form.get('id')
         name = request.form.get("name")
         email = request.form.get("email")
         color = request.form.get("color")
         offices = request.form.get("offices")
         size = request.form.get("size")
         # Convert the string ID to ObjectId
-        bookings_id = ObjectId(bookings_id)
+        booking_id = ObjectId(booking_id)
         # Edit the record from the collection
 
-    booking = db.bookings.update_one({'_id':bookings_id},{'$set' :{"name": name, "email": email, "color": color, "offices": offices, "size": size}})
+    result = db.bookings.update_one({'_id':booking_id},{'$set' :{"name": name, "email": email, "color": color, "offices": offices, "size": size}})
+    
     booking=[]
-
     for i in db.bookings.find():
           booking.append(i)
           return render_template('booking.html', booking=booking)
@@ -305,14 +305,14 @@ def Edit_booking():
 @app.route('/Edit_booking1', methods=['POST'])
 def Edit_booking1():
     if request.method == 'POST':
-        bookings_id = request.form.get('update_id')
+        booking_id = request.form.get('update_id')
         name = request.form.get("name")
         email = request.form.get("email")
         color = request.form.get("color")
         offices = request.form.get("offices")
         size = request.form.get("size")
 
-    return render_template('Editbooking.html', name=name, email=email, color=color, offices=offices, size=size,  bookings_id = bookings_id,)
+    return render_template('Editbooking.html', name=name, email=email, color=color, offices=offices, size=size,  booking_id = booking_id,)
 
 
 @app.route('/')
@@ -322,6 +322,96 @@ def getbooking():
     return render_template('booking.html', booking=booking)
 
 
+
+
+# Add Service
+ 
+@app.route('/AddService', methods=["POST", "GET"])
+def AddService1():
+    if request.method == 'POST':
+        name = request.form['name']
+        catagory = request.form['catagory']
+        description = request.form['description']
+        
+        
+        Service = { 'name': name, 'catagory': catagory, 'description': description}
+
+        db.Services.insert_one(Service)
+        if ('form submission success'):
+                     return redirect (url_for('Adminservice'))
+        else:
+
+                  if ('form submission failed'):
+                   return 'form unsuccessful'
+        
+    return render_template("AddService.html")
+
+
+# Display service
+
+@app.route("/service", methods=["POST", "GET"] )
+def getservice():
+     if request.method == 'GET':
+          service = []
+
+          for i in db.service.find():
+           service.append(i)
+
+     return render_template("service.html" , x=service)
+ 
+ 
+@app.route('/delete_service', methods=['POST'])
+def delete_service():
+    if request.method == 'POST':
+        service_id = request.form.get('delete_id')  # Get the ID of the record to delete
+        # Convert the string ID to ObjectId
+        service_id = ObjectId(service_id)
+        # Delete the record from the collection
+        result = db.service.delete_one({'_id': service_id})
+        if result.deleted_count == 1:
+            service = []
+
+            for i in db.service.find():
+               service.append(i)
+            return render_template('service.html', x=service)
+        else:
+            return 'Record not found or could not be deleted.'
+
+# Edit service
+@app.route('/EditService', methods=['POST'])
+def Edit_Service():
+    if request.method == 'POST':
+        Service_id = request.form.get('id')  # Get the ID of the record to delete
+        name = request.form.get('name')  # Get the ID of the record to delete
+        color = request.form.get('color')  # Get the ID of the record to delete
+        offices = request.form.get('offices')
+        size = request.form.get('size')
+        # Convert the string ID to ObjectId
+        Service_id = ObjectId(Service_id)
+        # Edit the record from the collection
+        
+        result = db.Service.update_one({'_id': Service_id},{'$set' :{'name' :name, 'color':color, 'offices': offices, 'size': size}})
+        Service= []
+
+        for i in db.Service.find():
+            Service.append(i)
+        return render_template('Service.html', x=Service)
+
+@app.route('/Edit_Service1', methods=['POST'])
+def Edit_Service1():
+    if request.method == 'POST':
+        Service_id = request.form.get('update_id') 
+        name = request.form.get('name') 
+        price = request.form.get('price') 
+
+        return render_template('EditService.html', name=name, price=price, Service_id=Service_id)
+
+        
+@app.route('/AdminserviceOf')
+def Adminservice():
+    # Fetch data from the collection
+   service = db.service.find
+   return render_template('AdminService.html', x=service)
 
     
 

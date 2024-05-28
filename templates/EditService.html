@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Service Form</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="/EditBobCuts.css">
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="Image-container">
+            <form action="/EditService" method="post">
+               <div class="form">
+                   <center><h1>Edit Service</h1></center>
+                       <center><h2>BobCuts</h2></center>
+                           <br><br><br>
+            
+                           <input type="hidden" name="id" value={{Service_id}} required>
+
+                                   <input type="text" name="name" placeholder="Name" >
+                                      <input type="number" name="price" placeholder="Price" ><br><br>
+                                        <center><button type="submit">Edit</button></center>
+           
+      </div> 
+     </form> 
+   </div> 
+ </div>  
+    <script src=""></script> 
+</body>
+</html>

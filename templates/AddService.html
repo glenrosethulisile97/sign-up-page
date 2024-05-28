@@ -10,11 +10,16 @@
 <body>
   <div class="container">
     <form action="/AddService" method="POST">
-      <div class="form-group">
-        <label for="title">Title</label>
-        <input type="text" id="title" name="title" required>
-      </div>
-      <button type="submit">Submit</button>
+        <div class="form-group">
+                        
+            <input type="text" name="name" placeholder="name" required>
+            <input type="text" name="category" placeholder="category" required><br>
+            <textarea class="form-control" id="description" placeholder="Brief Description of your piece" name="description"></textarea>
+                           
+       
+        
+                <center><button type="submit">Add</button></center>
+        </div>
     </form>
   </div>
 </body>
