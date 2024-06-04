@@ -7,8 +7,8 @@ body {
   }
   
   .navbar {
-    background-color: #333;
-    color: white;
+    background-color: #f6f2f2;
+    color: rgb(23, 22, 22);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -52,8 +52,8 @@ body {
   button {
     padding: 8px 16px;
     margin-left: 8px;
-    background-color: #0c5b7da4;
-    color: rgba(11, 10, 10, 0.744);
+    background-color: #fcfeff;
+    color: rgb(13, 0, 0);
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -61,7 +61,7 @@ body {
   }
   
   .button:hover {
-    background-color: #0e0f0ebd;
+    background-color: #000202;
   }
   
   .container {
@@ -76,7 +76,7 @@ body {
   .service {
     width: calc(30% - 20px); /* Adjust the width as needed */
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #0f0e0e;
     border-radius: 5px;
     margin-bottom: 20px;
     box-sizing: border-box;
@@ -85,11 +85,11 @@ body {
   
   .service h2 {
     margin-top: 0;
-    color: #0f0d0d;
+    color: #171717;
   }
   
   .service p {
-    color: #0b0a0aed;
+    color: #0a0a0a;
   }
   
   img {
@@ -111,7 +111,7 @@ body {
   
   footer {
     background-color: #333;
-    color: #fff;
+    color: #0f0e0e;
     text-align: center;
     padding: 20px 0;
     margin-top: 100px;
@@ -121,7 +121,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    color: #ccc;
+    color: #211f1f;
   }
   
   .styled-section {
@@ -130,22 +130,22 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 10px rgb(17, 17, 17);
     text-decoration: dashed;
-    color: #ccc;
+    color: #181717;
     width: 300px;
     margin-left: auto;
     margin-right: auto;
   }
   
   .styled-section h2 {
-    color: hsla(0, 26%, 95%, 0.886);
+    color: hsla(0, 8%, 3%, 0.886);
   }
   
   .styled-section p {
-    color: hsl(0, 24%, 96%);
+    color: hsl(0, 3%, 7%);
   }
   
   .code-container {
-    background-color: #f8f8f8;
+    background-color: #0b0b0b;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -154,13 +154,13 @@ body {
   }
   
   .code-container h2 {
-    color: #333;
+    color: #111010;
     font-size: 24px;
     margin-bottom: 20px;
   }
   
   .code.example-html {
-    background-color: #fff;
+    background-color: #191818;
     border-radius: 8px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -174,7 +174,7 @@ body {
     
  }
  .recipe {
-    background-color: #f5f2f2;
+    background-color: #1b1a1a;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 8px;

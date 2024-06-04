@@ -323,7 +323,6 @@ def getbooking():
 
 
 
-
 # Add Service
  
 @app.route('/AddService', methods=["POST", "GET"])
@@ -345,9 +344,8 @@ def AddService1():
                   if ('form submission failed'):
                    return 'form unsuccessful'
     else:
-      services= db.Services.find()
         
-    return render_template("AddService.html",services=services)
+     return render_template("AddService.html")
 
 
 # Display service
