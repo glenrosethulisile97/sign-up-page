@@ -285,7 +285,7 @@ def delete_booking():
 @app.route('/Editbooking', methods=['POST'])
 def Edit_booking():
     if request.method == 'POST':
-        booking_id = request.form.get('id')
+        booking_id = request.form.get('booking_id')
         name = request.form.get("name")
         email = request.form.get("email")
         color = request.form.get("color")
@@ -305,7 +305,7 @@ def Edit_booking():
 @app.route('/Edit_booking1', methods=['POST'])
 def Edit_booking1():
     if request.method == 'POST':
-        booking_id = request.form.get('update_id')
+        booking_id = request.form.get('booking_id')
         name = request.form.get("name")
         email = request.form.get("email")
         color = request.form.get("color")
@@ -361,20 +361,20 @@ def getservice():
      return render_template("service.html" , x=service)
  
  
-@app.route('/delete_service', methods=['POST'])
+@app.route('/delete_AdminService', methods=['POST'])
 def delete_service():
     if request.method == 'POST':
-        service_id = request.form.get('delete_id')  # Get the ID of the record to delete
+        services_id = request.form.get('delete_id')  # Get the ID of the record to delete
         # Convert the string ID to ObjectId
-        service_id = ObjectId(service_id)
+        services_id = ObjectId(services_id)
         # Delete the record from the collection
-        result = db.service.delete_one({'_id': service_id})
+        result = db.Services.delete_one({'_id': services_id})
         if result.deleted_count == 1:
             service = []
 
-            for i in db.service.find():
+            for i in db.Services.find():
                service.append(i)
-            return render_template('service.html', x=service)
+            return render_template('AdminService.html', x=service)
         else:
             return 'Record not found or could not be deleted.'
 
@@ -384,6 +384,7 @@ def Edit_Service():
     if request.method == 'POST':
         Service_id = request.form.get('id')  # Get the ID of the record to delete
         name = request.form.get('name')  # Get the ID of the record to delete
+        email = request.form.get('email')
         color = request.form.get('color')  # Get the ID of the record to delete
         offices = request.form.get('offices')
         size = request.form.get('size')
@@ -391,7 +392,7 @@ def Edit_Service():
         Service_id = ObjectId(Service_id)
         # Edit the record from the collection
         
-        result = db.Service.update_one({'_id': Service_id},{'$set' :{'name' :name, 'color':color, 'offices': offices, 'size': size}})
+        result = db.Service.update_one({'_id': Service_id},{'$set' :{'name' :name,'email': email, 'color':color, 'offices': offices, 'size': size}})
         Service= []
 
         for i in db.Service.find():

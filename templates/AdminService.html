@@ -52,19 +52,29 @@
                     <td>{{ i.description}}</td>
                     
                     <td>
-                        <form action="/delete_Service" method="post">
+                        <form action="/delete_AdminService" method="post">
                             <input type="hidden" id="delete_id" name="delete_id" value={{i._id}}>
+                            <input type="hidden" id="delete_id" email="delete_id" value={{i._id}}>
+                            <input type="hidden" id="delete_id" color="delete_id" value={{i._id}}>
+                            <input type="hidden" id="delete_id" offices="delete_id" value={{i._id}}>
+                            <input type="hidden" id="delete_id" size="delete_id" value={{i._id}}>
                             <input type="submit" value="Delete">
                           </form>
+                        <!-- <form action="/delete_AdminService" method="post">
+                            <input type="hidden" id="delete_id" name="delete_id" value={{i._id}}>
+                            <input type="submit" value="Delete">
+                          </form> -->
                     </td>
                    <td>
-                        <form action="/Edit_Service1" method="post">
-                            <input type="hidden" id="update_id" name="update_id" value={{i._id}}>
-                            <input type="hidden" id="name" name="name" value={{i._name}}>
-                            <input type="hidden" id="category" name="catagory" value={{i.catagory}}>
-                            <input type="hidden" id="description" name="description" value={{i.description}}>
-                            <input type="submit" value="Update">
-                        </form>
+                    <form action="/Edit_Service1" method="post">
+                        <input type="hidden" id="Update_id" name="Update_id" value={{i._id}}>
+                        <input type="hidden" id="Update_id" email="Update_id" value={{i._id}}>
+                        <input type="hidden" id="Update_id" color="Update_id" value={{i._id}}>
+                        <input type="hidden" id="Update_id" offices="Update_id" value={{i._id}}>
+                        <input type="hidden" id="Update_id" size="Update_id" value={{i._id}}>
+                        <input type="submit" value="Update">
+                      </form>
+                       
                     </td> 
                    
                 </tr>
