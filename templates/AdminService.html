@@ -65,15 +65,17 @@
                             <input type="submit" value="Delete">
                           </form> -->
                     </td>
-                   <td>
-                    <form action="/Edit_Service1" method="post">
-                        <input type="hidden" id="Update_id" name="Update_id" value={{i._id}}>
-                        <input type="hidden" id="Update_id" email="Update_id" value={{i._id}}>
-                        <input type="hidden" id="Update_id" color="Update_id" value={{i._id}}>
-                        <input type="hidden" id="Update_id" offices="Update_id" value={{i._id}}>
-                        <input type="hidden" id="Update_id" size="Update_id" value={{i._id}}>
-                        <input type="submit" value="Update">
-                      </form>
+                   
+                        <td>
+                            <form action="/EditService" method="post">
+                                <input type="hidden" id="update_id" name="update_id" value={{i._id}}>
+                                <input type="hidden" id="name" name="name" value={{i._name}}>
+                                <input type="hidden" id="category" name="category" value={{i._category}}>
+                                <input type="hidden" id="description" name="description" value={{i._description}}>
+                                <input type="submit" value="Update">
+                            </form>
+                        </td>
+                    
                        
                     </td> 
                    

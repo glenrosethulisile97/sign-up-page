@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Service Form</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="/static/DeleteBobCuts.css">
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="Image-container">
+            <form action="/DeleteService" method="post">
+               <div class="form">
+                   <center><h1>Delete Service</h1></center>
+                       <center><h2>Service</h2></center>
+                           <br><br><br>
+            
+                                
+                                   <input type="text" id= "name" name = "Name" required>
+                                   <input type="number" id="price" price="price" maxlength="5" required>
+                                    <input type="hidden" name="Service_id" value="{{ row._id }}">
+                                    <center><button type="submit">Delete</button></center>
+                                      
+      </div> 
+     </form> 
+   </div> 
+ </div>  
+    <script src=""></script> 
+</body>
+</html>

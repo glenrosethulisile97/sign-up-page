@@ -9,7 +9,8 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
 
-}.container {
+}
+.container {
     background-color:transparent;
     max-width: 500px;
     height: 600px;
