@@ -33,6 +33,7 @@
                     <!-- Loop through bookings (assumes you have server data) -->
                     {% for booking in booking %}
                     <tr>
+                        <td>{{booking._id}}</td>
                         <td>{{ booking.name }}</td>
                         <td>{{ booking.email }}</td>
                         <td>{{ booking.color }}</td>

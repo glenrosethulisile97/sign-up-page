@@ -240,7 +240,8 @@ def delete_booking():
     else:
             return 'Record not found or could not be deleted.'
     
-
+# /Editbooking/{6667ddac8e1e45947465f7a9}
+    # editebooking/{booking_id}
 @app.route('/Editbooking', methods=['POST'])
 def Edit_booking():
     if request.method == 'POST':
@@ -252,6 +253,12 @@ def Edit_booking():
         size = request.form.get("size")
         # Convert the string ID to ObjectId
         booking_id = ObjectId(booking_id)
+        print("id ", booking_id)
+        print("name ", name)
+        print("e ", email)
+        print("c ", color)
+        print("o ", offices)
+        print("s ", size)
         # Edit the record from the collection
 
     result = db.bookings.update_one({'_id':booking_id},{'$set' :{"name": name, "email": email, "color": color, "offices": offices, "size": size}})
@@ -325,7 +332,7 @@ def delete_service():
 
             for i in db.Services.find():
                service.append(i)
-            return render_template('AdminService.html', x=service)
+            return render_template('AdminService.html', service=service)
         else:
             return 'Record not found or could not be deleted.'
 
