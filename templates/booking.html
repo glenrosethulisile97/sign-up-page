@@ -33,7 +33,7 @@
                     <!-- Loop through bookings (assumes you have server data) -->
                     {% for booking in booking %}
                     <tr>
-                        <td>{{booking._id}}</td>
+                        
                         <td>{{ booking.name }}</td>
                         <td>{{ booking.email }}</td>
                         <td>{{ booking.color }}</td>
@@ -51,11 +51,12 @@
                         </td>
                         <td>
                             <form action="/Edit_booking1" method="post">
-                                <input type="hidden" id="Update_id" name="Update_id" value={{booking._id}}>
-                                <input type="hidden" id="Update_id" email="Update_id" value={{booking._id}}>
-                                <input type="hidden" id="Update_id" color="Update_id" value={{booking._id}}>
-                                <input type="hidden" id="Update_id" offices="Update_id" value={{booking._id}}>
-                                <input type="hidden" id="Update_id" size="Update_id" value={{booking._id}}>
+                                <input type="hidden" id="booking_id" name="booking_id" value={{booking._id}}>
+                                <input type="hidden" id="name" name="name" value={{booking.name}}>
+                                <input type="hidden" id="email" email="email" value={{booking.email}}>
+                                <input type="hidden" id="color" color="color" value={{booking.color}}>
+                                <input type="hidden" id="offices" offices="offices" value={{booking.offices}}>
+                                <input type="hidden" id="size" size="size" value={{booking.size}}>
                                 <input type="submit" value="Update">
                               </form>
                         </td>

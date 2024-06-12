@@ -253,12 +253,12 @@ def Edit_booking():
         size = request.form.get("size")
         # Convert the string ID to ObjectId
         booking_id = ObjectId(booking_id)
-        print("id ", booking_id)
-        print("name ", name)
-        print("e ", email)
-        print("c ", color)
-        print("o ", offices)
-        print("s ", size)
+        print("tests", booking_id)
+        print("tests2 ", name)
+        print("tests3", email)
+        print("tests4", color)
+        print("tests5", offices)
+        print("tests6", size)
         # Edit the record from the collection
 
     result = db.bookings.update_one({'_id':booking_id},{'$set' :{"name": name, "email": email, "color": color, "offices": offices, "size": size}})
@@ -277,6 +277,13 @@ def Edit_booking1():
         color = request.form.get("color")
         offices = request.form.get("offices")
         size = request.form.get("size")
+        print("tests second", booking_id)
+        print("test second 2", name)
+        print("test second 3", email)
+        print("test second 4", color)
+        print("test second 5", offices)
+        print("test second 6", size)
+
 
     return render_template('Editbooking.html', name=name, email=email, color=color, offices=offices, size=size,  booking_id = booking_id,)
 
