@@ -104,7 +104,7 @@ def AdminLogin():
         
 
     # Render the login form template
-    return render_template('AdminLogin.html')\
+    return render_template('AdminLogin.html')
     
 #Home Client
 @app.route('/homepage', methods=['GET', 'POST'])
@@ -347,29 +347,35 @@ def delete_service():
 @app.route('/EditService', methods=['POST'])
 def Edit_Service():
     if request.method == 'POST':
-        Service_id = request.form.get('id')  # Get the ID of the record to delete
-        name = request.form['name']
-        category = request.form['category']
-        description = request.form['description']
+        service_id = request.form.get('service_id')  # Get the ID of the record to delete
+        name = request.form.get['name']
+        category = request.form.get['category']
+        description = request.form.get['description']
         # Convert the string ID to ObjectId
-        Service_id = ObjectId(Service_id)
+        service_id = ObjectId(service_id)
         # Edit the record from the collection
         
-        result = db.Service.update_one({'_id': Service_id},{'$set' :{'name' :name,'category': category, 'description':description,}})
-        Service= []
+        result = db.Services.update_one({'_id': service_id},{'$set' :{'name' :name,'category': category, 'description':description,}})
+        service= []
 
-        for i in db.Service.find():
-            Service.append(i)
-        return render_template('Service.html', x=Service)
+
+    service=[]
+    for i in db.Services.find():
+          service.append(i)
+    return render_template('AdminService.html', service=service)
+
 
 @app.route('/Edit_Service1', methods=['POST'])
 def Edit_Service1():
     if request.method == 'POST':
-      name = request.form['name']
-      category = request.form['category']
-      description = request.form['description']
+      service_id = request.form.get('service_id')
+      name = request.form.get['name']
+      category = request.form.get['category']
+      description = request.form.get['description']
 
-    return render_template('EditService.html', name=name, category=category, description=description)
+
+        
+    return render_template('EditService.html', name=name, category=category, description=description, service_id=service_id)
 
         
 @app.route('/AdminserviceOf')
@@ -377,6 +383,43 @@ def Adminservice():
     # Fetch data from the collection
    service = db.Services.find
    return render_template('AdminService.html', x=service)
+
+
+@app.route('/review', methods=['GET', 'POST'])
+def review():
+    if request.method == 'POST':
+        # Get the review data from the request
+        name = request.form.get('name')
+        category= request.form.get('category')
+        description = request.form.get('description')
+        review_message = request.form.get('review_message')
+        rating = int(request.form.get('rating'))
+
+        # Prepare the review data as a dictionary
+        review_data = {
+            'name': name,
+            'category': category,
+            'description': description,
+            'review_message': review_message,
+            'rating': rating
+        }
+
+        # Save the review data to the MongoDB database
+        mongo.db.review_collection.insert_one(review_data)
+
+        # Redirect to the review_display route after submission
+        return redirect(url_for('review_display'))
+
+    # Render the review template on GET request
+    return render_template('review.html')
+
+@app.route('/review_display', methods=['GET'])
+def review_display():
+    # Retrieve data from MongoDB
+    displays = mongo.db.review_collection.find()
+
+    # Render the review_display template with the data
+    return render_template('review.html', displays=displays)
 
     
 

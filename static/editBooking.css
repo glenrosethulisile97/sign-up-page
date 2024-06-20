@@ -48,13 +48,13 @@ button {
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
-    background-color: #4CAF50;
-    color: white;
+    background-color: #cdd9cdb1;
+    color: rgb(9, 7, 7);
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #2819c8c6;
 }
 .button-container {
     text-align: center; /* Optional: Centers the buttons horizontally */

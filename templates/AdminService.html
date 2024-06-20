@@ -45,33 +45,30 @@
                 </tr>
             </thead>
             <tbody>
-                {% for i in service %}
+                {% for service in service %}
                 <tr>
-                    <td>{{ i.name }}</td>
-                    <td>{{ i.category }}</td>
-                    <td>{{ i.description}}</td>
+                    <td>{{ service.name }}</td>
+                    <td>{{ service.category }}</td>
+                    <td>{{ service.description}}</td>
                     
                     <td>
                         <form action="/delete_AdminService" method="post">
-                            <input type="hidden" id="delete_id" name="delete_id" value={{i._id}}>
-                            <input type="hidden" id="delete_id" email="delete_id" value={{i._id}}>
-                            <input type="hidden" id="delete_id" color="delete_id" value={{i._id}}>
-                            <input type="hidden" id="delete_id" offices="delete_id" value={{i._id}}>
-                            <input type="hidden" id="delete_id" size="delete_id" value={{i._id}}>
+                            <input type="hidden" id="delete_id" name="delete_id" value={{service._id}}>
+                            <input type="hidden" id="delete_id" email="delete_id" value={{service._id}}>
+                            <input type="hidden" id="delete_id" color="delete_id" value={{service._id}}>
+                            <input type="hidden" id="delete_id" offices="delete_id" value={{service._id}}>
+                            <input type="hidden" id="delete_id" size="delete_id" value={{service._id}}>
                             <input type="submit" value="Delete">
                           </form>
-                        <!-- <form action="/delete_AdminService" method="post">
-                            <input type="hidden" id="delete_id" name="delete_id" value={{i._id}}>
-                            <input type="submit" value="Delete">
-                          </form> -->
+                       
                     </td>
                    
                         <td>
-                            <form action="/EditService" method="post">
-                                <input type="hidden" id="update_id" name="update_id" value={{i._id}}>
-                                <input type="hidden" id="name" name="name" value={{i._name}}>
-                                <input type="hidden" id="category" name="category" value={{i._category}}>
-                                <input type="hidden" id="description" name="description" value={{i._description}}>
+                            <form action="/Edit_Service1" method="post">
+                                <input type="hidden" id="service_id" name="service_id" value={{service._id}}>
+                                <input type="hidden" id="name" name="name" value={{service.name}}>
+                                <input type="hidden" id="category" category="category" value={{service.category}}>
+                                <input type="hidden" id="description" description="description" value={{service.description}}>
                                 <input type="submit" value="Update">
                             </form>
                         </td>

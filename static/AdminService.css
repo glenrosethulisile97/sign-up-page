@@ -220,13 +220,13 @@ button {
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
-    background-color: #4CAF50;
-    color: white;
+    background-color: #edf7ee5e;
+    color: rgb(12, 11, 11);
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #2216a121;
 }
 .button-container {
     text-align: center; /* Optional: Centers the buttons horizontally */
