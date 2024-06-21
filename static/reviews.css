@@ -197,3 +197,30 @@ body {
     background-color: #0056b3;
     border-color: #004085;
   } 
+
+  .form-group {
+    margin: 15px 0;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  
+  .form-control:focus {
+    border-color: #66afe9;
+    outline: none;
+    box-shadow: 0 0 8px rgba(102, 175, 233, 0.6);
+  }
+  
+  .form-control option {
+    padding: 10px;
+    background-color: #fff;
+  }

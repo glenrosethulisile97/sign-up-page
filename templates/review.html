@@ -159,8 +159,14 @@
           <textarea class="form-control" id="name" name="name" placeholder="Type your name..."></textarea>
         </div>
         <div class="form-group">
-          <textarea class="form-control" id="category" name="category" placeholder="Type of category..."></textarea>
-        </div>
+            <select class="form-control" id="category" name="category">
+              <option value="" disabled selected>Type of category...</option>
+              <option value="concept-design-solutions">Concept Design Solutions</option>
+              <option value="material-finish-selection">Material and Finish Selection</option>
+              <option value="styling-decoration">Styling and Decoration</option>
+              <option value="renovation-remodeling">Renovation and Remodeling</option>
+            </select>
+          </div>
         <div class="form-group">
           <textarea class="form-control" id="description" name="description" placeholder="List the description received..."></textarea>
         </div>
@@ -186,16 +192,16 @@
       <div class="notification">
         <div class="notification-header">
           <h3>FEEDBACK</h3>
-          <button class="close-btn">X</button>
+         
         </div>
         <div class="notification-body">
         
           <div class="buyer-info">
-            <p><strong>Name:</strong> {{ display.name }}</p>
-            <p><strong>Category:</strong> {{ display.category }}</p>
-            <p><strong>Description:</strong> {{ display.description }}</p>
-            <p><strong>Review Message:</strong> {{ display.review_message }}</p>
-            <p><strong>Rating:</strong> {{ display.rating }}</p>
+            <p><strong></strong> {{ display.name }}</p>
+            <p><strong></strong> {{ display.category }}</p>
+            <p><strong></strong> {{ display.description }}</p>
+            <p><strong></strong> {{ display.review_message }}</p>
+            <p><strong></strong> {{ display.rating }}</p>
           </div>
         </div>
       </div>
