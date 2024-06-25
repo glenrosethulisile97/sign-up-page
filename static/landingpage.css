@@ -39,9 +39,17 @@ header h1 {
     
 }
 
+.t{
+    margin-right: 660px;
+}
+
 /* Navigation menu styles */
 nav {
     background-color: #c3bec397;
+    height: 35px;
+    padding-top: 20px;
+padding-left: 29px;
+padding-bottom: 19px;
 }
 
 nav ul {
