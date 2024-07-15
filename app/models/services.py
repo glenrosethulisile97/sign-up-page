@@ -1,9 +1,6 @@
-from ..import mongo
+from .. import mongo
 
+class services:
 
-
-class landing:
-
-   def AdminServices():
-    service = mongo.db.Services.find()  
-    return list("AdminService.html", service = service)
+ def services():
+    return mongo.Services.find(services)

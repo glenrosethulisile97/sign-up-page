@@ -1,39 +1,30 @@
-from flask import Flask, url_for, redirect, Response, request, render_template,session
-from .. import mongo
-from..models.services import service
+from flask import request, render_template
+from ..models import services
 
-def landing():
-    return render_template("landingpage.html")
+def admin_services():
+    services = services()
+    return render_template("AdminService.html", services=services)
 
-
-# #Display Service
 def services():
-        return render_template("service.html")
+    return render_template("service.html")
 
-# Display AdminService
+def concept_design():
+    return render_template("Concept Design.html")
 
-def AdminServices(): 
-    return render_template("AdminService.html", service = services)
+def material_finish():
+    return render_template("Material and Finish.html")
 
+def styling_decoration():
+    return render_template("Styling and Decoration.html")
 
-# Display Service
-def services(): 
-    return render_template("service.html",)
+def renovation_remodeling():
+    return render_template("Renovation and Remodeling.html")
 
+def add_concept_design():
+    return render_template("Add_Conceptdesign.html")
 
-
-def Concept_Design():
-        return render_template("Concept Design.html")
-
-
-def Material_Finish():
-        return render_template("Material and Finish.html")
-
-
-def Styling_Decoration():
-        return render_template("Styling and Decoration.html")
-
-
-def Renovation_Remodeling():
-        return render_template("Renovation and Remodeling.html")
-
+def add_office():
+    if request.method == 'POST':
+        # Handle the post request if needed
+        pass
+    return render_template("AddOffice.html")
