@@ -1,6 +1,12 @@
 from flask import request, redirect, url_for, render_template
 from ..models.bookings import book
 
+
+def add():   
+    if request.method == 'POST':
+        return render_template("AddOffice.html")
+    return render_template("AddOffice.html")
+
 def add_booking():
     if request.method == 'POST':
         name = request.form.get("name")
@@ -22,9 +28,7 @@ def Confirmation():
 
           for i in book.get_confirmation():
             booking.append(i)
-
-
-     return render_template("confirmation.html" , booking=booking ) 
+            
 
 
 def getBooking():

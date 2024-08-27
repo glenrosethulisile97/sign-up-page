@@ -15,7 +15,7 @@ def create_app():
        app.register_blueprint(user_routes.app)
        app.register_blueprint(services_routes.service_bp)
        app.register_blueprint(bookings_routes.booking_bp)
-
+       
 
        return app
 
