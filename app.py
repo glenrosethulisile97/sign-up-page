@@ -130,7 +130,7 @@ def about():
 # #Display Service
 # @app.route('/services')
 # def services():
-#         return render_template("service.html")
+        return render_template("service.html")
 
 # Display AdminService
 @app.route("/AdminServices", methods=["GET"])
@@ -378,7 +378,7 @@ def Edit_Service1():
     return render_template('EditService.html', name=name, category=category, description=description, service_id=service_id)
 
         
-@app.route('/AdminserviceOf')
+# @app.route('/AdminserviceOf')
 def Adminservice():
     # Fetch data from the collection
    service = db.Services.find

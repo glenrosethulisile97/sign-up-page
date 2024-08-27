@@ -235,4 +235,123 @@ form {
         padding: 10px;
     }
 }
+
+
+
+ .star-rating {
+            font-size: 25px;
+            unicode-bidi: bidi-override;
+            color: #c5c5c5;
+            position: relative;
+            padding-left: 0;
+            cursor: pointer;
+        }
+
+        .star-rating input {
+            display: none; /* Hide the radio buttons */
+        }
+
+        .star-rating label {
+            font-size: 0; /* Hide the label text */
+            display: inline-block;
+            width: 20px; /* Width of each star */
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .star-rating label:before {
+            content: '\2606'; /* Empty star character */
+            font-size: 25px;
+            display: block;
+        }
+
+        .star-rating input:checked ~ label:before {
+            content: '\2605'; /* Filled star character */
+            color: #ffc107; /* Color of filled stars */
+        }
+
+        .body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+        }.
+
+        .container {
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        max-width: 600px;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      .form-group {
+        margin-bottom: 20px;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+        color: #333;
+      }
+      .rating .star {
+        cursor: pointer;
+        font-size: 24px;
+        color: #ccc;
+      }
+      .rating .star.active {
+        color: #ffcc00;
+      }
+      button {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+      #popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: grey;
+        border: 1px solid black;
+        padding: 20px;
+        z-index: 1000;
+      }
+      .notification-container {
+        max-width: 600px;
+        margin: 20px auto;
+      }
+      .notification {
+        background-color:grey;
+        border: 1px solid #1c1b1b;
+        border-radius: 5px;
+        padding: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .notification-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+     
+      
+      .notification-body {
+        margin-top: 10px;
+      }
+      .buyer-info {
+        margin-top: 10px;
+      }
   
