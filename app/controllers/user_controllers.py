@@ -41,7 +41,7 @@ def AdminLogin():
         
         if existing_user:
             # Redirect to homepage or some other route upon successful login
-            return render_template("landingpage.html")
+            return render_template("adminDashboard.html")
         else:
             # User not found, display error message
             flash('Invalid username or password.', 'error')
@@ -95,3 +95,6 @@ def login():
             return redirect(url_for('user.login'))
     # Render the login form template
     return render_template('loginpage.html')
+
+def landing():
+        return render_template("homepage.html")

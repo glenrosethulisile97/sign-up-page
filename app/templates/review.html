@@ -57,7 +57,7 @@
         align-items: center;
         height: 100vh;
         flex-direction: column;
-        }.
+        }
 
         .container {
         background-color: white;
@@ -144,7 +144,7 @@
   <body>
     <div class="container">
       <h2>Leave a Review</h2>
-      <form id="inquiry-form" action="{{ url_for('review') }}" method="POST" enctype="multipart/form-data">
+      <form id="inquiry-form" action="{{ url_for('reviews.review') }}" method="POST" enctype="multipart/form-data">
         <div class="form-group">
           <div class="rating" id="rating">
             <span class="star">&#9733;</span>
@@ -182,7 +182,7 @@
     
   
     <!-- Popup notification -->
-    <div id="popup">
+    <div id="popup" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);background-color: white;border: 1px solid black; padding: 20px; z-index: 1000;">
       <p>Review submitted successfully!</p>
       <button class="btn btn-primary" id="close-popup">Close</button>
     </div>
@@ -252,7 +252,7 @@
   
         document.getElementById('close-popup').addEventListener('click', function() {
           document.getElementById('popup').style.display = 'none';
-          window.location.href = "/review_display";
+          window.location.href = "http://127.0.0.1:5000/review_display";
         });
       });
     </script>

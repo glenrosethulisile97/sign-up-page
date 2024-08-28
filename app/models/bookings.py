@@ -1,4 +1,4 @@
-from ..import mongo
+from .. import mongo
 
 class book:
     def add_booking(booking):
@@ -7,5 +7,7 @@ class book:
     def display_booking():
         return mongo.db.bookings.find()
     
-    def get_confirmation():
+    def booking():
         return mongo.db.bookings.find()
+    
+    

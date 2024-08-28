@@ -1,12 +1,6 @@
 from flask import request, redirect, url_for, render_template
 from ..models.bookings import book
 
-
-def add():   
-    if request.method == 'POST':
-        return render_template("AddOffice.html")
-    return render_template("AddOffice.html")
-
 def add_booking():
     if request.method == 'POST':
         name = request.form.get("name")
@@ -17,10 +11,14 @@ def add_booking():
 
         booking = {"name": name, "email": email, "color": color, "offices": offices, "size": size}
         book.add_booking(booking)
-        return redirect(url_for("booking.confirmation"))
-    
-    return render_template("AddOffice.html")
 
+        if booking:
+            return redirect(url_for('booking'))
+        else:
+            return 'Form submission failed.'                             
+    
+    return "Success"
+       
 
 def Confirmation():
      if request.method == 'GET':
@@ -31,7 +29,7 @@ def Confirmation():
             
 
 
-def getBooking():
+def getbooking():
     booking = []
     if request.method == 'GET':
         for i in book.display_booking ():

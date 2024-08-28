@@ -1,9 +1,9 @@
 from flask import request, render_template
-from ..models import services
+from ..models.servicespage import products
 
-def admin_services():
-    services = services()
-    return render_template("AdminService.html", services=services)
+def AdminServices():
+    service = products.get_the_service()
+    return render_template("AdminService.html", service = service)
 
 def services():
     return render_template("service.html")
@@ -22,6 +22,13 @@ def renovation_remodeling():
 
 def add_concept_design():
     return render_template("Add_Conceptdesign.html")
+
+def about():
+    return render_template("about.html")
+
+def contact():
+    return render_template("contact.html")
+
 
 def add_office():
     if request.method == 'POST':
