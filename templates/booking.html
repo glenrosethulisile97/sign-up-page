@@ -7,19 +7,49 @@
         <meta name="description" content="Booking form page">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="/static/booking.css">
+        <script>
+          
+          function confirmDelete(event) {
+  event.preventDefault(); // Prevent the form from submitting directly
+  var popup = document.getElementById("deletePopup");
+  popup.style.display = "block";
+
+  var closeBtn = document.getElementsByClassName("close")[0];
+  closeBtn.onclick = function() {
+    popup.style.display = "none";
+  };
+
+  window.onclick = function(event) {
+    if (event.target == popup) {
+      popup.style.display = "none";
+    }
+  };
+
+  var confirmBtn = document.getElementById("confirmDeleteBtn");
+  confirmBtn.onclick = function() {
+    event.target.submit(); // Submit the form if the user confirms the deletion
+  };
+
+  var cancelBtn = document.getElementById("cancelBookingBtn");
+  cancelBtn.onclick = function() {
+    popup.style.display = "none";
+    // Add any additional logic to cancel the booking
+  };
+
+  var cancelBtn = document.getElementById("cancelBtn");
+  cancelBtn.onclick = function() {
+    popup.style.display = "none";
+  };
+}
+        </script>
     </head>
     <body>
         <div class="container">
             <h1>Booking</h1>
-           
             <!-- Button to AddBooking Page -->
             <a href="/AddBooking"><button type="button">Book Now</button></a>
-           
-            
-            
             <!-- Booking details table -->
             <table action="/booking" method="Get" border="1">
-                
                 <thead>
                     <tr>
                         <th>Client Name</th>
@@ -33,21 +63,20 @@
                     <!-- Loop through bookings (assumes you have server data) -->
                     {% for booking in booking %}
                     <tr>
-                        
                         <td>{{ booking.name }}</td>
                         <td>{{ booking.email }}</td>
                         <td>{{ booking.color }}</td>
                         <td>{{ booking.offices }}</td>
                         <td>{{ booking.size  }}</td>
                         <td>
-                            <form action="/delete_booking" method="post">
+                            <form action="/delete_booking" method="post" onsubmit="confirmDelete(event)">
                                 <input type="hidden" id="delete_id" name="delete_id" value={{booking._id}}>
                                 <input type="hidden" id="delete_id" email="delete_id" value={{booking._id}}>
                                 <input type="hidden" id="delete_id" color="delete_id" value={{booking._id}}>
                                 <input type="hidden" id="delete_id" offices="delete_id" value={{booking._id}}>
                                 <input type="hidden" id="delete_id" size="delete_id" value={{booking._id}}>
                                 <input type="submit" value="Delete">
-                              </form>
+                            </form>
                         </td>
                         <td>
                             <form action="/Edit_booking1" method="post">
@@ -58,12 +87,24 @@
                                 <input type="hidden" id="offices" offices="offices" value={{booking.offices}}>
                                 <input type="hidden" id="size" size="size" value={{booking.size}}>
                                 <input type="submit" value="Update">
-                              </form>
+                            </form>
                         </td>
                     </tr>
                     {% endfor %}
                 </tbody>
             </table>
+
+
+            <div id="deletePopup" class="popup">
+                <div class="popup-content">
+                  <span class="close">&times;</span>
+                  <p>Are you sure you want to delete this booking?</p>
+                  <div class="popup-buttons">
+                    <button id="confirmDeleteBtn">Confirm Delete</button>
+                    <button id="cancelBookingBtn">Cancel Booking</button>
+                  </div>
+                </div>
+              </div>
         </div>
     </body>
 </html>
