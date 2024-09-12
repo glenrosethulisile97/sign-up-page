@@ -1,7 +1,10 @@
 from flask import Flask, render_template, request, redirect, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import *
+import os
 app = Flask(__name__ , static_url_path='/static')
+
+
 app.config['MONGO_URI'] = 'mongodb://localhost:27017/mydatabase'
 mongo = PyMongo(app)
 db = mongo.db
@@ -423,4 +426,6 @@ def review_display():
     
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000)
+
+port = int(os.environ.get('PORT', 5000))
