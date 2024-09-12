@@ -218,7 +218,7 @@ def Confirmation():
             
           
 
-     return render_template("confirmation.html" , booking=booking )    
+     return render_template("confirmation.html" , booking=booking )     
 
 #delete booking
 @app.route('/delete_booking', methods=['POST'])
